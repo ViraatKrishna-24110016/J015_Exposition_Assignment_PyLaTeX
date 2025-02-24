@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyLaTeX: Automating LaTeX Document Generation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            max-width: 8000px;
+            margin: 10px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            max-width: 80px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <h1>PyLaTeX: Automating LaTeX Document Generation</h1>
+    </header> -->
+    <header>
+        <h1> ES114</h1>
+        <img src="images/pylatex-banner.jpg" alt="Blog Banner" class="banner">
+        <h1> Automating LaTeX Document Generation</h1> 
+    <!-- /*Getting Started with PyLaTeX: A Beginner's Guide to*/ -->
+    </header>
+    <!-- <div class="author-name">By Adusumilli Viraat Krishna(24110016), P V N S K Nikhil(24110262), Shivansh(24110330)</div>
+    <div class ="place"><p>Indian Institute Technology Gandhinagar -- ES114</div> -->
+    <main>
+        <h2>Introduction</h2>
+        <p>LaTeX is a powerful typesetting system widely used for academic and scientific documents. However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content. PyLaTeX, a Python library, allows users to programmatically create LaTeX documents, making automation and templating much easier.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li>Automated Document Creation</li>
+            <li>Table and Figure Handling</li>
+            <li>Mathematical Notation Support</li>
+            <li>Modular and Reusable Components</li>
+            <li>Integration with Data Sources</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <p>To install PyLaTeX, use the following command:</p>
+        <pre><code>pip install pylatex</code></pre>
+        <h2>Key Features & Explaination </h2>
+        <ul>
+            <li>Creating and customizing LaTeX documents with Python.</li>
+            <li>Handling sections, tables, math formulas, images, and more.</li>
+            <li>Accessing the LaTeX preamble to include custom packages</li>
+            <li>Easily generating PDFs from your LaTeX code.</li>
+            <li>Modular and Reusable Components</li>
+            <li>PyLaTeX offers an intuitive way to integrate Python’s flexibility with LaTeX’s powerful document formatting</li>
+            <!-- <li>Integration with Data Sources</li> -->
+        </ul>
+        <!-- Creating and customizing LaTeX documents with Python.
+        Adding sections, tables, math formulas, images, and more.
+        Accessing the LaTeX preamble to include custom packages.
+        Easily generating PDFs from your LaTeX code.
+        PyLaTeX offers an intuitive way to integrate Python’s flexibility with LaTeX’s powerful document formatting. 
+        Benefits of Using PyLaTeX
+Dynamic Document Creation: PyLaTeX allows you to generate documents dynamically using Python code. This is especially useful for generating reports based on data or automatically creating complex documents.
+
+Automation: You can automate repetitive tasks, such as generating academic papers or reports, saving time and reducing errors.
+
+Integration with Python Tools: PyLaTeX integrates seamlessly with Python's data processing tools. You can easily create plots, generate tables from data, and perform calculations within your Python code before embedding them into your LaTeX document.
+
+Customization: You can fully customize the layout, structure, and content of your LaTeX document. Whether you’re creating a simple article or a comprehensive thesis, PyLaTeX provides flexibility.
+
+        -->        
+        <h2>Benefits of using pyLaTex</h2>
+        <ol>
+            <li><b>Dynamic Document Creation</b>: PyLaTeX allows you to generate documents dynamically using Python code. This is especially useful for generating reports based on data or automatically creating complex documents.
+            </li>
+            <li><b>Automation</b>: You can automate repetitive tasks, such as generating academic papers or reports, saving time and reducing errors.
+            </li>
+            <li><b>Integration with Python Tools</b>: PyLaTeX integrates seamlessly with Python's data processing tools. You can easily create plots, generate tables from data, and perform calculations within your Python code before embedding them into your LaTeX document.
+            </li>
+            <li><b>Customization</b>: You can fully customize the layout, structure, and content of your LaTeX document. Whether you’re creating a simple article or a comprehensive thesis, PyLaTeX provides flexibility.
+            </li>
+        </ol>
+        <h2>Code Example</h2>
+        <ol><li>Introduction</li> </ol>
+        <pre><code><img align="right" src="images\Introduction Ass-4.png"alt='Introduction' height=400px weight=1000px>
+            import os
+            import pylatex
+            from pylatex import(
+                Alignat,
+                Axis,
+                Document,
+                Figure,
+                Math,
+                Matrix,
+                Plot,
+                Section,
+                Subsection,
+                Tabular,
+                TikZ,
+                Subsubsection,
+                Command
+            )
+            
+            from pylatex.utils import NoEscape
+            
+            doc = Document(documentclass="article", document_options=["12pt", "a4paper"])
+            # Create a document with A4 page size and 12pt font
+            
+            # Add title, author, and date
+            doc.preamble.append(Command("title", "PSDV Exposition Assignment"))
+            doc.preamble.append(Command("author", "Group J015"))
+            doc.preamble.append(Command("date", "24-02-2025"))
+            doc.append(NoEscape(r"\maketitle"))
+            #NoEscape makes it so that LaTeX doesn't consider \ as part of text and uses it as LaTeX command.
+            
+            </code></pre><li>Abstract</li>
+            <pre><code>
+            with doc.create(Section("Abstract")):
+                doc.append("""This Document shows the reserch about PyLaTeX made using PyLaTeX, it displays the variety of commands that 
+                PyLaTeX has to offer and shows the full capabilities of PyLaTeX and how it helps better the experience of making 
+                pdf or a tex file.""")
+                
+            
+            
+            with doc.create(Section("Introduction")):
+                doc.append("""LaTeX is a powerful typesetting system widely used for academic and scientific documents.
+                            However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content.
+                            PyLaTeX, a Python library, allows users to programmatically create LaTeX documents,
+                            making automation and templating much easier.""")</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>PyLaTeX is a fantastic tool for individuals looking to leverage the power of LaTeX with the flexibility of Python. Whether you're generating academic papers, creating reports, or simply learning how to automate document generation, PyLaTeX provides an accessible interface that can enhance your productivity. As you advance, you can explore more complex features, but starting with simple documents will help you build a solid foundation. Embrace the potential of PyLaTeX and take your LaTeX document creation to the next level!</p>
+
+        <h2>Further Reading</h2>
+        <ul>
+            <li><a href="https://jeltef.github.io/PyLaTeX/current/" target="_blank">PyLaTeX Documentation</a></li>
+            <li><a href="https://www.latex-project.org/" target="_blank">LaTeX Project</a></li>
+            <li><a href="https://www.tug.org/texlive/" target="_blank">TeX Live</a></li>
+        </ul>
+    </main>
+   
+    <footer>
+        <div class="author-name"> By,<br> Adusumilli Viraat Krishna(24110016),<br> P V N S K Nikhil(24110262),<br> Shivansh(24110330)</div>
+        <div class ="place"><p >Indian Institute Technology Gandhinagar -- ES114</div>
+        <p>&copy; 2025 PyLaTeX Blog</p>
+    </footer>
+    
+</body>
+</html>
