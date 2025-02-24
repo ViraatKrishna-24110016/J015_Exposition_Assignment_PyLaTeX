@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyLaTeX: Automating LaTeX Document Generation</title>
     <style>
+        /* @media (max-width: 768px) {
+        main {
+            width: 90%;
+            padding: 10px; */
+        img {
+            width: 90%;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -53,7 +61,7 @@
     </header> -->
     <header>
         <h1> ES114</h1>
-        <img src="pylatex-banner.jpg" alt="Blog Banner" class="banner">
+        <img src="pylatex-banner.jpg" alt="Blog Banner" class="banner" width="1458 "px>
         <h1> Automating LaTeX Document Generation</h1> 
     <!-- /*Getting Started with PyLaTeX: A Beginner's Guide to*/ -->
     </header>
@@ -112,8 +120,8 @@ Customization: You can fully customize the layout, structure, and content of you
             </li>
         </ol>
         <h2>Code Example</h2>
-        <ol><li>Introduction</li> </ol>
-        <pre><code><img align="right" src="pic.png"alt='Introduction' height=400px weight=1000px>
+        <ol><li>Abstract and Introduction </li> </ol><pre><code style="font-family: Arial, Helvetica, sans-serif;">
+        <!-- <pre><code><img align="right" src="images\introductionAbstract.jpg"alt='Introduction' height=400px weight=1000px> -->
             import os
             import pylatex
             from pylatex import(
@@ -144,8 +152,6 @@ Customization: You can fully customize the layout, structure, and content of you
             doc.append(NoEscape(r"\maketitle"))
             #NoEscape makes it so that LaTeX doesn't consider \ as part of text and uses it as LaTeX command.
             
-            </code></pre><li>Abstract</li>
-            <pre><code>
             with doc.create(Section("Abstract")):
                 doc.append("""This Document shows the reserch about PyLaTeX made using PyLaTeX, it displays the variety of commands that 
                 PyLaTeX has to offer and shows the full capabilities of PyLaTeX and how it helps better the experience of making 
@@ -157,7 +163,8 @@ Customization: You can fully customize the layout, structure, and content of you
                 doc.append("""LaTeX is a powerful typesetting system widely used for academic and scientific documents.
                             However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content.
                             PyLaTeX, a Python library, allows users to programmatically create LaTeX documents,
-                            making automation and templating much easier.""")</code></pre>
+                            making automation and templating much easier.""")
+                            <center><img src="pic.png"alt='Introduction' height=700px weight=1000px></center></code></pre>
 
         <h2>Conclusion</h2>
         <p>PyLaTeX is a fantastic tool for individuals looking to leverage the power of LaTeX with the flexibility of Python. Whether you're generating academic papers, creating reports, or simply learning how to automate document generation, PyLaTeX provides an accessible interface that can enhance your productivity. As you advance, you can explore more complex features, but starting with simple documents will help you build a solid foundation. Embrace the potential of PyLaTeX and take your LaTeX document creation to the next level!</p>
