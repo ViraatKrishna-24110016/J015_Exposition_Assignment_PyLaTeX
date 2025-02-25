@@ -24,7 +24,7 @@
             color: #333;
         }
         header {
-            background: #333;
+            background: #333333;
             color: white;
             text-align: center;
             padding: 20px;
@@ -47,7 +47,7 @@
             font-size: medium;
         }
         code {
-            font-family: 'Times New Roman', Times, serif;
+            font-family:monospace;
             width: 90%;
             height: 90%;;
         }
@@ -63,40 +63,47 @@
     <!-- <header>
         <h1>PyLaTeX: Automating LaTeX Document Generation</h1>
     </header> -->
-<!--     <header>
-        <h1 align="'center"> ES114<br></h1>
-        <img src="pylatex-banner.jpg" alt="Blog Banner" class="banner"  width= 90% height =90%>
-        <h1> Automating LaTeX Document Generation</h1> 
-    <!-- /*Getting Started with PyLaTeX: A Beginner's Guide to*/
-    </header> -->
-     <Header>
+<!-- 
+        <h1 > ES114<br></h1>
+        <H2 >Exposition Article</H2>  -->
+        <Header>
                     <h1 style="color:rgb(255, 255, 255)"> ES114<br></h1>
         <H1 style="color:rgb(255, 255, 255)">Exposition Article</H1> 
 
         <figure>
-        <img src="pylatex-banner.jpg" alt="Blog Banner" class="banner"  width= 90% height =90%></figure>
+        <img src="images/pylatex-banner.jpg" alt="Blog Banner" class="banner"  width= 90% height =90%></figure>
         <center>
         <H2 style="color:rgb(255, 255, 255)" >J015</H2>
         <h1 style="color:rgb(255, 255, 255)"> Automating LaTeX Document Generation</h1></center>
         </Header>
+    <!-- /*Getting Started with PyLaTeX: A Beginner's Guide to*/ -->
+
     <!-- <div class="author-name">By Adusumilli Viraat Krishna(24110016), P V N S K Nikhil(24110262), Shivansh(24110330)</div>
     <div class ="place"><p>Indian Institute Technology Gandhinagar -- ES114</div> -->
     <main>
         <h2>Introduction</h2>
         <p>LaTeX is a powerful typesetting system widely used for academic and scientific documents. However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content. PyLaTeX, a Python library, allows users to programmatically create LaTeX documents, making automation and templating much easier.</p>
 
-        <h2>Key Features</h2>
+        <!-- <h2>Key Features</h2>
         <ul>
             <li>Automated Document Creation</li>
             <li>Table and Figure Handling</li>
             <li>Mathematical Notation Support</li>
             <li>Modular and Reusable Components</li>
             <li>Integration with Data Sources</li>
-        </ul>
+        </ul> -->
 
         <h2>Installation</h2>
-        <p>To install PyLaTeX, use the following command:</p>
-        <pre><code>pip install pylatex</code></pre>
+        <ul><li>First install python latest version </li>
+        <li>To install PyLaTeX, use the following command:
+        <pre><code>pip install pylatex</code></pre></li>
+        <li>Install LaTeX Distribution
+            PyLaTeX requires a LaTeX distribution to compile .tex files into PDFs. Install one based on your OS:
+            
+            <br>Windows: Install <b>MiKTeX</b>.<br>
+            MacOS: Install <b>MacTeX</b>.<br>
+            Linux: Install <b>TeX Live via</b>. <br>
+        <pre><code>sudo apt install texlive-latex-extra</code></pre></li><p>Now, Check if this works by writing any basic program from the below mentioned codes. </p></ul>
         <h2>Key Features & Explaination </h2>
         <ul>
             <li>Creating and customizing LaTeX documents with Python.</li>
@@ -136,7 +143,7 @@ Customization: You can fully customize the layout, structure, and content of you
         <h2>Code Basic Example With Screenshots</h2>
         <ol><li><h3>Basic Operations</h3></li>
         <p>In using PyLaTeX, first we need to create a document class variable and specify it's type. This can be done as follows:</p>
-    <pre><code>doc = Document(documentclass = "basic")</pre>
+    <pre><code>doc = Document(documentclass = "basic")</code></pre>
         <p>Other types availble are article, book, report, beamer. Others attributes which can mentioned inlcude fontsize, fontenc, page numbers, orientation, page size etc.
              After creating the document we need to add content to it. This can be done as:</p>
         <pre><code>doc.append("The content you like to add")</code></pre>
@@ -160,7 +167,7 @@ Customization: You can fully customize the layout, structure, and content of you
             doc.append("This is a report with custom options.")
             
             # Generate the PDF
-            doc.generate_pdf("sample", clean_tex = False)<center><img src="sample.png"alt='Sample' height=700px weight=500px></code></pre>
+            doc.generate_pdf("sample", clean_tex = False)<center><img src="Screenshots/sample.png"alt='Sample' height=700px weight=500px></code></pre>
         <li><h2>Classifiying text</h2></li>    
         <p>Now after creating the document and adding the text, we would like to have our data categorised for better readability and information accessing. This can done using the Section() and Subsection() classes.
 
@@ -178,11 +185,11 @@ Customization: You can fully customize the layout, structure, and content of you
                 doc.append("This is a section under the section: 'THE SUBSECTION'")
             
             doc.generate_pdf('section')
-            <center><img src="SECTION.png" alt='Section' height=700px weight=500px></code></pre>
+            <center><img src="Screenshots/SECTION.png"alt='Section' height=700px weight=500px></code></pre>
         <li><h2>
             Advanced Formatting</h2></li>
             <h3>Preamble</h3>
-            <p>In daily use the preamble is defined as : is an introductory and expressionary statement in a document that explains the document's purpose and underlying philosophy. Similarly, in pylatex, commands written
+            <p>In daily use the preamble is defined as :<br> Is an introductory and expressionary statement in a document that explains the document's purpose and underlying philosophy.<br> Similarly, in pylatex, commands written
              in the preamble syntax, make changes to the document such that they define the global settings, load packages, and set up the document's structure. Syntax for it is:</p>
             <pre><code>doc.preamble.append("command")</code></pre>
             <p>Normally raw LaTeX commands are passed through, which might be skipped by the compiler by parsing. To avoid this we use the NoEscape class in the pylatex.utlis module (more on this later on...). Example:</p>
@@ -204,12 +211,12 @@ Customization: You can fully customize the layout, structure, and content of you
                     doc.append("This is the section under the subsection: 'THE SUBSECTION'")
                 
                 doc.generate_pdf('preamble')
-                <center><img src="Preamble1.png"alt='preamble' height=700px weight=500px></center></code></pre>
+                <center><img src="Screenshots/Preamble1.png"alt='preamble' height=700px weight=500px></center></code></pre>
                 <li><h2>Creating custom pagestyles</h2></li>
-                <p>We can format the header and footer of the pages to our liking using the pylatex.headfoot module. This module includes the classes head and foot which can be used to add the required info like company name/ journal name/ page numbers etc., on top and bottom of the pages.
-
-                    To employ the usage of these classes, we will have to first create a PageStyle class under which the head and foot classes are defined.
-                     After creation we append the PageStyle into the document using the preamble, and later on change the style. A python implementation is given as a reference:</p>
+                <ul><li>We can format the header and footer of the pages to our liking using the pylatex.headfoot module.<br> This module includes the classes head and foot which can be used to add the required info like company name/ journal name/ page numbers etc., on top and bottom of the pages.
+                    </li>
+                    <li></li>To employ the usage of these classes, we will have to first create a PageStyle class under which the head and foot classes are defined.</li>
+                     <li></li>After creation we append the PageStyle into the document using the preamble, and later on change the style. A python implementation is given as a reference:<li></ul>
             <pre><code>from pylatex import Head, Foot, PageStyle, Command, LineBreak, MiniPage, LargeText, MediumText
                 from pylatex.utils import NoEscape, bold
                 
@@ -241,7 +248,7 @@ Customization: You can fully customize the layout, structure, and content of you
                   doc.append("""LaTeX is a powerful typesetting system widely used for academic and scientific documents. However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content. PyLaTeX, a Python library, allows users to programmatically create LaTeX documents, making automation and templating much easier.""")
                 
                 doc.generate_pdf('header')
-            <center ><img src="Header.png" alt='Students Data' height=700px weight=500px></center> </center></code></pre>
+            <center ><img src="Screenshots/Header.png" alt='Students Data' height=700px weight=500px></center> </center></code></pre>
                 <li><h2>Advanced Features</h2>
                 </li><p>
                     Aside from just adding texts we can create tables, list, and math formulae
@@ -250,22 +257,22 @@ Customization: You can fully customize the layout, structure, and content of you
                 <!-- <h3>Tables</h3> -->
                 <p>To add tables we use the Tabular class. After creating a class variable, the following functions can employed for customization of the table:</p>
                 <pre><code>with doc.create(Tabular('specify the table layout')) as variable name of table:</code></pre>
-                <p>For specify the the table layout use the following notations:
+                <p>For specify the the table layout use the following notations:<br>
 
-                    r - right aligned column
-                    c - centre aligned column
-                    l - left aligned column
-                    | - specify that border is present (single lined)
-                    || - specify that border is present (double lined)
+                    r - right aligned column<br>
+                    c - centre aligned column<br>
+                    l - left aligned column<br>
+                    | - specify that border is present (single lined)<br>
+                    || - specify that border is present (double lined)<br>
                     There is another attribute called pos which can be used to define the vertical alignment of the data in the cell by using r, c and l which are right, centre (default), and left respectivly.
+                    <br><br>
+                    After setting up the data, content can be added:<br>
                     
-                    After setting up the data, content can be added:
+                    table.add-row() : to add rows<br>
                     
-                    table.add-row() : to add rows
+                    tabel.add_empty() : to add empty rows<br>
                     
-                    tabel.add_empty() : to add empty rows
-                    
-                    table.add_hline() : to add a horizontal line
+                    table.add_hline() : to add a horizontal line<br>
                     
                     An implementation is presented below:</p>
                 <!-- <pre><code>from pylatex import Tabular
@@ -287,7 +294,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     
                     doc.generate_pdf("Student data") -->
                     <!-- <h3> Tables and Tabular data</h3> -->
-        <pre><code style="font-family: Arial, Helvetica, sans-serif;"> import os
+        <pre><code> import os
             import numpy as np
             import pylatex
             from pylatex import(
@@ -333,7 +340,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     table.add_hline()
             doc.generate_pdf("Tabular")
         
-                    <center><img src="TablesandTabularData'.jpg"alt='Students Data' height=700px weight=500px></code></pre>
+                    <center><img src="images\TablesandTabularData'.jpg"alt='Students Data' height=700px weight=500px></center></code></pre>
                         <p>Try the following code snippet. What do you observe?
 
                         </p>
@@ -352,7 +359,7 @@ Customization: You can fully customize the layout, structure, and content of you
                             table.add_hline()
                         
                         doc.generate_pdf("animal report")
-                        <center><img src="animal report.png"alt='animal report' height=700px weight=500px></code></pre>
+                        <center><img src="Screenshots/animal report.png"alt='animal report' height=700px weight=500px></center></code></pre>
                     <p>We find that the paragraphs in the column are going out of the page. This can be rectified using the p{width} column specifier.
 
                     </p><pre><code>doc = Document('basic')
@@ -370,7 +377,7 @@ Customization: You can fully customize the layout, structure, and content of you
                             table.add_hline()
                         
                         doc.generate_pdf("animal report_mod")
-                        <center><img src="animal report mod.png"alt='Introduction' height=700px weight=500px></code></pre>
+                        <center><img src="Screenshots/animal report mod.png"alt='Introduction' height=700px weight=500px></center></code></pre>
                 <h3>Math Formulae</h3>
                 <p>We can include math formulae and notations in proper manner by using Math Syntax:</p>
                 <pre><code>doc.append(Math(data = ['equation to be specified']))</code></pre>
@@ -408,7 +415,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     
                     doc.append(section)
                     doc.generate_pdf("numpy_ex")
-                    <center><img src="numpy_ex.png"alt='Numpy' height=700px weight=500px></code></pre>
+                    <center><img src="Screenshots/numpy_ex.png"alt='Numpy' height=700px weight=500px></code></pre>
                     <p>Above we see an another way of sectioning the content in the document. Here like the doc variable, 
                         we create variables for Section() and Subsection() classes also and append them under respective areas.</p>
                     <li><h3>Lists</h3></li>
@@ -445,13 +452,13 @@ Customization: You can fully customize the layout, structure, and content of you
                             
                             doc.append(section)
                             doc.generate_pdf("lists")
-                            <center><img src="lists.png"alt='Lists' height=700px weight=500px></center></code></pre>
+                            <center><img src="Screenshots/lists.png"alt='Lists' height=700px weight=500px></center></code></pre>
                             <p>We can see that:
-
+<br>
                                 Itemize : is adding bullets to points
-                                
+                                <br>
                                 Enumerate : is numbering the points.
-                                
+                                <br>
                                 Description : is using a word as the seperator and adding points/ description related to it.</p>
                     </ol>
         <!-- <h2> Daily based coding examples</h2>
@@ -622,4 +629,3 @@ Teachers can generate quiz papers, question banks, and certificates dynamically 
     
 </body>
 </html>
-
