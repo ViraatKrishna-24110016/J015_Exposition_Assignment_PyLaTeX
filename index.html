@@ -71,7 +71,7 @@
         <H1 style="color:rgb(255, 255, 255)">Exposition Article</H1> 
 
         <figure>
-        <img src="images/pylatex-banner.jpg" alt="Blog Banner" class="banner"  width= 90% height =90%></figure>
+        <img src="pylatex-banner.jpg" alt="Blog Banner" class="banner"  width= 90% height =90%></figure>
         <center>
         <H2 style="color:rgb(255, 255, 255)" >J015</H2>
         <h1 style="color:rgb(255, 255, 255)"> Automating LaTeX Document Generation</h1></center>
@@ -167,7 +167,7 @@ Customization: You can fully customize the layout, structure, and content of you
             doc.append("This is a report with custom options.")
             
             # Generate the PDF
-            doc.generate_pdf("sample", clean_tex = False)<center><img src="Screenshots/sample.png"alt='Sample' height=700px weight=500px></code></pre>
+            doc.generate_pdf("sample", clean_tex = False)<center><img src="sample.png"alt='Sample' height=700px weight=500px></code></pre>
         <li><h2>Classifiying text</h2></li>    
         <p>Now after creating the document and adding the text, we would like to have our data categorised for better readability and information accessing. This can done using the Section() and Subsection() classes.
 
@@ -185,7 +185,7 @@ Customization: You can fully customize the layout, structure, and content of you
                 doc.append("This is a section under the section: 'THE SUBSECTION'")
             
             doc.generate_pdf('section')
-            <center><img src="Screenshots/SECTION.png"alt='Section' height=700px weight=500px></code></pre>
+            <center><img src="SECTION.png"alt='Section' height=700px weight=500px></code></pre>
         <li><h2>
             Advanced Formatting</h2></li>
             <h3>Preamble</h3>
@@ -211,7 +211,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     doc.append("This is the section under the subsection: 'THE SUBSECTION'")
                 
                 doc.generate_pdf('preamble')
-                <center><img src="Screenshots/Preamble1.png"alt='preamble' height=700px weight=500px></center></code></pre>
+                <center><img src="Preamble1.png"alt='preamble' height=700px weight=500px></center></code></pre>
                 <li><h2>Creating custom pagestyles</h2></li>
                 <ul><li>We can format the header and footer of the pages to our liking using the pylatex.headfoot module.<br> This module includes the classes head and foot which can be used to add the required info like company name/ journal name/ page numbers etc., on top and bottom of the pages.
                     </li>
@@ -248,7 +248,7 @@ Customization: You can fully customize the layout, structure, and content of you
                   doc.append("""LaTeX is a powerful typesetting system widely used for academic and scientific documents. However, manually writing LaTeX code can be time-consuming, especially for dynamically generated content. PyLaTeX, a Python library, allows users to programmatically create LaTeX documents, making automation and templating much easier.""")
                 
                 doc.generate_pdf('header')
-            <center ><img src="Screenshots/Header.png" alt='Students Data' height=700px weight=500px></center> </center></code></pre>
+            <center ><img src="Header.png" alt='Students Data' height=700px weight=500px></center> </center></code></pre>
                 <li><h2>Advanced Features</h2>
                 </li><p>
                     Aside from just adding texts we can create tables, list, and math formulae
@@ -340,7 +340,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     table.add_hline()
             doc.generate_pdf("Tabular")
         
-                    <center><img src="images\TablesandTabularData'.jpg"alt='Students Data' height=700px weight=500px></center></code></pre>
+                    <center><img src="TablesandTabularData'.jpg"alt='Students Data' height=700px weight=500px></center></code></pre>
                         <p>Try the following code snippet. What do you observe?
 
                         </p>
@@ -359,7 +359,7 @@ Customization: You can fully customize the layout, structure, and content of you
                             table.add_hline()
                         
                         doc.generate_pdf("animal report")
-                        <center><img src="Screenshots/animal report.png"alt='animal report' height=700px weight=500px></center></code></pre>
+                        <center><img src="animal report.png"alt='animal report' height=700px weight=500px></center></code></pre>
                     <p>We find that the paragraphs in the column are going out of the page. This can be rectified using the p{width} column specifier.
 
                     </p><pre><code>doc = Document('basic')
@@ -377,7 +377,7 @@ Customization: You can fully customize the layout, structure, and content of you
                             table.add_hline()
                         
                         doc.generate_pdf("animal report_mod")
-                        <center><img src="Screenshots/animal report mod.png"alt='Introduction' height=700px weight=500px></center></code></pre>
+                        <center><img src="animal report mod.png"alt='Introduction' height=700px weight=500px></center></code></pre>
                 <h3>Math Formulae</h3>
                 <p>We can include math formulae and notations in proper manner by using Math Syntax:</p>
                 <pre><code>doc.append(Math(data = ['equation to be specified']))</code></pre>
@@ -415,7 +415,7 @@ Customization: You can fully customize the layout, structure, and content of you
                     
                     doc.append(section)
                     doc.generate_pdf("numpy_ex")
-                    <center><img src="Screenshots/numpy_ex.png"alt='Numpy' height=700px weight=500px></code></pre>
+                    <center><img src="numpy_ex.png"alt='Numpy' height=700px weight=500px></code></pre>
                     <p>Above we see an another way of sectioning the content in the document. Here like the doc variable, 
                         we create variables for Section() and Subsection() classes also and append them under respective areas.</p>
                     <li><h3>Lists</h3></li>
@@ -452,7 +452,7 @@ Customization: You can fully customize the layout, structure, and content of you
                             
                             doc.append(section)
                             doc.generate_pdf("lists")
-                            <center><img src="Screenshots/lists.png"alt='Lists' height=700px weight=500px></center></code></pre>
+                            <center><img src="lists.png"alt='Lists' height=700px weight=500px></center></code></pre>
                             <p>We can see that:
 <br>
                                 Itemize : is adding bullets to points
